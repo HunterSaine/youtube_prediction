@@ -1,6 +1,3 @@
 # created by virtualenv automatically
 *.env
 /keys.py
-/bin/
-/lib/
-
