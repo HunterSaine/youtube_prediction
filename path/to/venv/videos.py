@@ -1,11 +1,12 @@
-
 from keys import api_key
 import pandas as pd
 import googleapiclient.discovery
 import googleapiclient.errors
+
 pd.options.mode.chained_assignment = None
 apiServiceName = "youtube"
 apiVersion = "v3"
+
 
 def getyoutubevideos(api_key, max_results):
     youtube = googleapiclient.discovery.build(apiServiceName, apiVersion, developerKey=api_key)
@@ -20,6 +21,7 @@ def getyoutubevideos(api_key, max_results):
         all_videos.extend(response['items'])
         request = youtube.videos().list_next(request, response)
     return all_videos
+
 
 videos = getyoutubevideos(api_key, 1000)
 print(len(videos))
