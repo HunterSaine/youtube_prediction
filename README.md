@@ -1,4 +1,4 @@
-uTube API Integration  
+YouTube API Integration  
 
 This project integrates with the YouTube API to fetch the most popular videos in the US region. The response is printed in JSON format.  
 
