@@ -44,5 +44,5 @@ filtered_df['Comment Ratio'] = filtered_df['Comment Count'] / filtered_df['View 
 current_date = datetime.datetime.now().strftime("%Y-%m-%d")
 
 file_name = f"../data/video_data_{current_date}.csv"
-
+print(filtered_df.head(25))
 filtered_df.to_csv(file_name, index=True)
