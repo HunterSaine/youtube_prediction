@@ -26,9 +26,10 @@ def getYoutubeVideos(api_key, max_results):
 
 videos = getYoutubeVideos(api_key, 1000)
 print(len(videos))
-
+print(videos[0])
 video_df = pd.json_normalize(videos)
 video_df = video_df.fillna(0)
+print(video_df.head(25))
 filtered_df = video_df[
     ['snippet.title', 'snippet.channelTitle', 'snippet.publishedAt', 'statistics.viewCount', 'statistics.likeCount',
      'statistics.commentCount']]
